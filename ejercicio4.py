@@ -1,6 +1,6 @@
 fecha = input("Escribe una fecha en formato dd/mm/aaaa: ")
 
-if:
+try:
     dia, mes, anio = fecha.split('/')
     dia = int(dia)
     mes = int(mes)
@@ -12,5 +12,5 @@ if:
         print(f"{dia} de {meses[mes - 1]} de {anio}")
     else:
         print("El mes no es válido.")
-else:
+except ValueError:
     print("El formato de la fecha es incorrecto. Tiene que ser dd/mm/aaaa.")
